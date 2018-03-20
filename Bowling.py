@@ -8,6 +8,15 @@ class Bowling:
     def __init__(self):
         self.ScArr = []
 
+    def numberofThrows(self):
+        return len(self.ScArr) + 1
+
+    def scoreTwoThrows(self, index):
+        return self.ScArr[index] + self.ScArr[index + 1] + self.ScArr[index + 2]
+
+    def frameScore(self, index):
+        return self.ScArr[index] + self.ScArr[index + 1]
+
     def throw(self, pins):
         if self.numberofThrows() > maxThrows:
             raise ValueError
@@ -30,12 +39,3 @@ class Bowling:
 
             frame = frame + 1
         return score
-
-    def numberofThrows(self):
-        return len(self.ScArr) + 1
-
-    def scoreTwoThrows(self, index):
-        return self.ScArr[index] + self.ScArr[index + 1] + self.ScArr[index + 2]
-
-    def frameScore(self, index):
-        return self.ScArr[index] + self.ScArr[index + 1]

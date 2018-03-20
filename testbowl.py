@@ -28,16 +28,6 @@ class TestBowling(ut.TestCase):
         else:
             self.fail("Expected a ValueError")
 
-    # def testBowlforOneSpare(self):
-    #     self.bowl.throw(1)
-    #     self.bowl.throw(9)
-    #     self.bowl.throw(5)
-    #
-    #     for i in range(17):
-    #         self.bowl.throw(0)
-    #
-    #     assert self.bowl.score() == 20
-
     def testBowlforOneStrike(self):
         self.bowl.throw(10)
         self.bowl.throw(1)
